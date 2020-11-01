@@ -83,12 +83,13 @@ nav{
 a{
     text-decoration: none;
     color: #091008;
-    background:#3e563e;
+    background:#c9d2d9;
     padding: 2%;
     margin: 2% 0;
+    border-radius: 0.75rem;
 }
 a:hover{
-    background:#090e08;
+    background:#110f03;
     color: #c9d2d8;
 }
 
@@ -102,9 +103,9 @@ a:hover{
 }
 
 .profilePic{
-    width:20%;
-    margin: 0 0 0 12%;
-    border: 10spx solid #748e9b;
+    margin-left : 12%;
+    border: 10px solid #748e9b;
+    max-width: 100%;
 }
 
 .title{
@@ -172,7 +173,7 @@ footer{
     display: flex;
     /* border: 3px solid purple; */
     text-align: center;
-    background: #1e2e21;
+    background: #657074;
     /* flex-wrap: wrap; */
 }
 h3{
@@ -190,7 +191,16 @@ footer a{
     font-size: 3.5rem;
 }
 
+@media(max-width: 800px){
 
+}
+
+@media(max-width: 500px){
+    nav{
+        flex-direction: column; 
+    }
+     
+}
 
 
 
