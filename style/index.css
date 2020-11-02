@@ -45,7 +45,7 @@ table {
     box-sizing:border-box;
     max-width:100%;
     font-family: 'Open Sans Condensed', sans-serif;
-    /* border:1px solid grey; */
+    border:1px solid grey;
 }
 
 html{
@@ -56,6 +56,12 @@ body{
     font-size:2.5rem;
     color:#091009;
     line-height:1.5;
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+    border: 1px solid red;
 }
 section{
     padding:4% 0;
@@ -78,14 +84,14 @@ h1{
 nav{
     display:flex;
     width: 45%;
-    margin: 0 5%;
+    /* margin: 0 5%; */
 }
-a{
+ a{
     text-decoration: none;
     color: #091008;
     background:#c9d2d9;
     padding: 2%;
-    margin: 2% 0;
+    /* margin: 2% 0; */
     border-radius: 0.75rem;
 }
 a:hover{
@@ -97,18 +103,21 @@ a:hover{
 
 .profile{
     display:flex;
-    width:100%;
+    width:25%;
     height:100%;
-
-    /* border: 3px solid red; */
-    
     justify-content: space-between;
 }
 
 .profilePic{
     margin-left : 12%;
+    max-height: 500px;
     border: 10px solid #748e9b;
     max-width: 100%;
+
+}
+
+.topMid{
+    display: flex;
 }
 
 .title{
@@ -142,14 +151,20 @@ h2 {
 
 .imgSmall {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%; 
 }
 
 .imgSmall img {
     background: #ced9df;
-    width: 20%;
     height: 20vh;
 }
+
+div p{
+background:  #7a93a0;
+}
+
 
 .words{
     display: flex;
@@ -192,24 +207,25 @@ h3{
 footer a{
     margin:1% auto;
     font-size: 3.5rem;
+    padding: 2%;;
 }
 /*************** Media 800px *************/
-
-@media(max-width: 800px){
+@media (max-width:800px){
     *{
         box-sizing:border-box;
         max-width:100%;
         font-family: 'Open Sans Condensed', sans-serif;
-        /* border:1px solid grey; */
+        border:1px solid grey;
     }
-    
+
     html{
         font-size:62.5%;
     }
     body{
         background: #c9d2d9;
+        background:pink;
         font-size:2.5rem;
-        color:#091009;
+        color:#091008;
         line-height:1.5;
     }
     section{
@@ -218,22 +234,24 @@ footer a{
         margin:0 auto;
     }
         /* header */
-    
+
     header{
         background: #7a93a0;
     }
-    
+
     h1{
         font-size:5rem;
         margin-left: 5%;
         font-family:'IBM Plex Serif', serif;
         font-weight: 600;
-        
+        text-align: center;
+        max-width: 100%;
     }
     nav{
         display:flex;
-        width: 45%;
-        margin: 0 5%;
+        width: 100%;
+        /* margin: 0 5%; */
+        justify-content: center;
     }
     a{
         text-decoration: none;
@@ -247,92 +265,109 @@ footer a{
         background:#110f03;
         color: #c9d2d8;
     }
-    
+
     /* profile and description */
-    
+
     .profile{
         display:flex;
         width:100%;
         height:100%;
-    
-        /* border: 3px solid red; */
-        
         justify-content: space-between;
     }
-    
+
     .profilePic{
-        margin-left : 12%;
+        /* margin-left: 20%; */
+        max-height: 500px;
         border: 10px solid #748e9b;
         max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+
     }
-    
+
+    .topMid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .title{
         display: flex;
         padding: 2%;
-        margin: 2%;
-        width: 30%;
+        /* margin: 2%; */
+        width: 100%;
+        max-height: 200px;
         flex-wrap: wrap;
-        /* border: 3px solid green; */
+        border: 3px solid green;
         justify-content: center;
         align-content: center;
     }
-    
+
     h2 {
         width: 100%;
         font-size: 4rem;
         text-align: center;
         font-family: 'IBM Plex Serif', serif;
     }
-    
+
     .p1{
-      font-size: 3rem;
-      text-align: center;
-      width:  100%; 
+    font-size: 3rem;
+    text-align: center;
+    width:  100%; 
     }
     .paragraph {
-        width:40%;
+        width:100%;
     }
-    
+
     /* img and titles */
-    
+
     .imgSmall {
         display: flex;
-        justify-content: space-around; 
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%; 
     }
-    
+
     .imgSmall img {
         background: #ced9df;
-        width: 20%;
         height: 20vh;
     }
-    
+
+    div p{
+        background:  #7a93a0;
+        text-align: center;
+        }
+
+
     .words{
         display: flex;
         
         justify-content: space-around;
         
     }
-    
+
     .words p {
-       background:#657075; 
-       width: 20%;
-       font-size: 2.5rem;
-       text-align: center;
+    background:#657075; 
+    width: 20%;
+    font-size: 2.5rem;
+    text-align: center;
     }
-    
+
     /* footer */
     .foot{
         display:flex;
         width: 100%;
+        flex-wrap: wrap;
     }
-    
+
     footer{
         width: 100%;
         display: flex;
         /* border: 3px solid purple; */
         text-align: center;
         background: #657074;
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
     }
     h3{
         margin: 2% auto;
@@ -340,170 +375,193 @@ footer a{
         align-items: center;
         color:#c9d2d9;
         font-family: 'IBM Plex Serif', serif;
+        max-width: 100%;
         
         /* justify-content: center; */
     }
-    
+
     footer a{
         margin:1% auto;
-        font-size: 3.5rem;
+        font-size: 4rem;
+        width: 100%;
     }
-    
+}    
 /*************** Media 800px *************/
-
 @media (max-width: 500px){
-  
-    *{
-        box-sizing:border-box;
-        max-width:100%;
-        font-family: 'Open Sans Condensed', sans-serif;
-        /* border:1px solid grey; */
-    }
+    @media (max-width:800px){
+        *{
+            box-sizing:border-box;
+            max-width:100%;
+            font-family: 'Open Sans Condensed', sans-serif;
+            border:1px solid grey;
+        }
     
-    html{
-        font-size:62.5%;
-    }
-    body{
-        background: #c9d2d9;
-        font-size:2.5rem;
-        color:#091009;
-        line-height:1.5;
-    }
-    section{
-        padding:4% 0;
-        width:90%;
-        margin:0 auto;
-    }
-        /* header */
+        html{
+            font-size:62.5%;
+        }
+        body{
+            background: #c9d2d9;
+            background:pink;
+            font-size:2.5rem;
+            color:#091008;
+            line-height:1.5;
+        }
+        section{
+            padding:4% 0;
+            width:90%;
+            margin:0 auto;
+        }
+            /* header */
     
-    header{
-        background: #7a93a0;
-    }
+        header{
+            background: #7a93a0;
+        }
     
-    h1{
-        font-size:5rem;
-        margin-left: 5%;
-        font-family:'IBM Plex Serif', serif;
-        font-weight: 600;
-        
-    }
-    nav{
-        display:flex;
-        width: 45%;
-        margin: 0 5%;
-    }
-    a{
-        text-decoration: none;
-        color: #091008;
-        background:#c9d2d9;
-        padding: 2%;
-        margin: 2% 0;
-        border-radius: 0.75rem;
-    }
-    a:hover{
-        background:#110f03;
-        color: #c9d2d8;
-    }
+        h1{
+            font-size:5rem;
+            margin-left: 5%;
+            font-family:'IBM Plex Serif', serif;
+            font-weight: 600;
+            text-align: center;
+            max-width: 100%;
+        }
+        nav{
+            display:flex;
+            width: 100%;
+            /* margin: 0 5%; */
+            justify-content: center;
+        }
+        a{
+            text-decoration: none;
+            color: #091008;
+            background:#c9d2d9;
+            padding: 2%;
+            margin: 2% 0;
+            border-radius: 0.75rem;
+        }
+        a:hover{
+            background:#110f03;
+            color: #c9d2d8;
+        }
     
-    /* profile and description */
+        /* profile and description */
     
-    .profile{
-        display:flex;
-        width:100%;
-        height:100%;
+        .profile{
+            display:flex;
+            width:100%;
+            height:100%;
+            justify-content: space-between;
+        }
     
-        /* border: 3px solid red; */
-        
-        justify-content: space-between;
-    }
+        .profilePic{
+            /* margin-left: 20%; */
+            max-height: 500px;
+            border: 10px solid #748e9b;
+            max-width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
     
-    .profilePic{
-        margin-left : 12%;
-        border: 10px solid #748e9b;
-        max-width: 100%;
-    }
+        }
     
-    .title{
-        display: flex;
-        padding: 2%;
-        margin: 2%;
-        width: 30%;
-        flex-wrap: wrap;
-        /* border: 3px solid green; */
-        justify-content: center;
-        align-content: center;
-    }
+        .topMid{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     
-    h2 {
-        width: 100%;
-        font-size: 4rem;
+        .title{
+            display: flex;
+            padding: 2%;
+            /* margin: 2%; */
+            width: 100%;
+            max-height: 200px;
+            flex-wrap: wrap;
+            border: 3px solid green;
+            justify-content: center;
+            align-content: center;
+        }
+    
+        h2 {
+            width: 100%;
+            font-size: 4rem;
+            text-align: center;
+            font-family: 'IBM Plex Serif', serif;
+        }
+    
+        .p1{
+        font-size: 3rem;
         text-align: center;
-        font-family: 'IBM Plex Serif', serif;
-    }
+        width:  100%; 
+        }
+        .paragraph {
+            width:100%;
+        }
     
-    .p1{
-      font-size: 3rem;
-      text-align: center;
-      width:  100%; 
-    }
-    .paragraph {
-        width:40%;
-    }
+        /* img and titles */
     
-    /* img and titles */
+        .imgSmall {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%; 
+        }
     
-    .imgSmall {
-        display: flex;
-        justify-content: space-around; 
-    }
+        .imgSmall img {
+            background: #ced9df;
+            height: 20vh;
+        }
     
-    .imgSmall img {
-        background: #ced9df;
+        div p{
+            background:  #7a93a0;
+            text-align: center;
+            }
+    
+    
+        .words{
+            display: flex;
+            
+            justify-content: space-around;
+            
+        }
+    
+        .words p {
+        background:#657075; 
         width: 20%;
-        height: 20vh;
-    }
-    
-    .words{
-        display: flex;
-        
-        justify-content: space-around;
-        
-    }
-    
-    .words p {
-       background:#657075; 
-       width: 20%;
-       font-size: 2.5rem;
-       text-align: center;
-    }
-    
-    /* footer */
-    .foot{
-        display:flex;
-        width: 100%;
-    }
-    
-    footer{
-        width: 100%;
-        display: flex;
-        /* border: 3px solid purple; */
+        font-size: 2.5rem;
         text-align: center;
-        background: #657074;
-        /* flex-wrap: wrap; */
-    }
-    h3{
-        margin: 2% auto;
-        font-size: 5rem;
-        align-items: center;
-        color:#c9d2d9;
-        font-family: 'IBM Plex Serif', serif;
-        
-        /* justify-content: center; */
-    }
+        }
     
-    footer a{
-        margin:1% auto;
-        font-size: 3.5rem;
-    }
-     
+        /* footer */
+        .foot{
+            display:flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    
+        footer{
+            width: 100%;
+            display: flex;
+            /* border: 3px solid purple; */
+            text-align: center;
+            background: #657074;
+            flex-wrap: wrap;
+        }
+        h3{
+            margin: 2% auto;
+            font-size: 5rem;
+            align-items: center;
+            color:#c9d2d9;
+            font-family: 'IBM Plex Serif', serif;
+            max-width: 100%;
+            
+            /* justify-content: center; */
+        }
+    
+        footer a{
+            margin:1% auto;
+            font-size: 4rem;
+            width: 100%;
+        }
+    } 
 }
