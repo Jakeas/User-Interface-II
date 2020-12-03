@@ -45,6 +45,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* body */
 *{
     /* border: 2px solid black; */
     max-width:100%;
@@ -54,6 +56,8 @@ table {
     box-sizing: border-box;
     margin: 0 auto
 }
+
+/* header */
 header{
     display: flex;
 }
@@ -77,11 +81,14 @@ nav a{
     font-size: 1.3rem;
     margin: 2% 1% 2% 0;
     border: 4px solid black;
+    border-radius: 100%;
 }
 nav a:hover{
     background: black;
     color:white;
 }
+
+/* main content */
 .profile{
     display: flex;
     justify-content: center;
@@ -97,7 +104,7 @@ nav a:hover{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 20%;
 }
 h1{
     font-size:6rem;
@@ -117,11 +124,14 @@ h1{
     text-align: center;
     text-shadow: 1px 1px black;
     border-radius: 10%;
+    background: RGBA(63, 86, 112, .75)
 }
 .profileImg a:hover{
     background: black;
     color:white;
 }
+
+/* image cards */
 .images{
     margin: 2%;
     display: flex;
@@ -185,6 +195,8 @@ h3{
     font-size: 1.2rem;
     text-align: center;
 }
+
+/* footer */
 footer{
     display: flex;
     flex-direction: column;
@@ -202,6 +214,7 @@ footer a{
     text-decoration: none;
     color: black;
     border:4px solid black;
+    border-radius: 20%;
 }
 footer a:hover{
     background: black;
@@ -214,6 +227,7 @@ footer a:hover{
 }
 .fab{
     margin:1%;
+    border-radius: 100%;
     font-size: 1.5rem;
     padding: 1%;
     border: 4px solid black;    
